@@ -1,3 +1,6 @@
+const repo = 'terminal-portfolio';
+
 module.exports = {
-  assetPrefix: '.',
+  assetPrefix: `/${repo}/`,
+  basePath: `/${repo}`,
 };
