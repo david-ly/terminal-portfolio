@@ -1,10 +1,8 @@
 {
-  "bioUrl": "https://raw.githubusercontent.com/m4tt72/m4tt72/master/README.md",
   "social": {
-    "instagram": "m4tt72",
-    "github": "m4tt72",
-    "linkedin": "yassinefathi"
+    "github": "david-ly",
+    "linkedin": "david-mac-ly"
   },
-  "theme": "gruvboxdark",
+  "theme": "gooey",
   "border": true
 }
