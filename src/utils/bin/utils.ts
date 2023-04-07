@@ -1,6 +1,10 @@
 import packageJson from '../../../package.json';
 import * as bin from './index';
 
+const gui_site = 'https://davidmacly.dev';
+const my_email = 'david.ly@berkeley.edu';
+const repo_url = 'https://github.com/david-ly/terminal-portfolio';
+
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
 
@@ -20,40 +24,21 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const gui = async (args: string[]): Promise<string> => {
-  window.open('https://m4tt72.com', '_self');
+  window.open(gui_site, '_self');
 
   return 'Opening GUI version...';
 };
 
 export const email = async (args: string[]): Promise<string> => {
-  window.open('mailto:hi@nm4tt72.com');
+  const mailto = `mailto:${my_email}`;
+  window.open(mailto);
 
-  return 'Opening mailto:hi@m4tt72.com...';
-};
-
-export const vi = async (args: string[]): Promise<string> => {
-  return `why use vi? try 'emacs'.`;
-};
-
-export const vim = async (args: string[]): Promise<string> => {
-  return `why use vim? try 'emacs'.`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `really? emacs? you should be using 'vim'`;
-};
-
-export const sudo = async (args?: string[]): Promise<string> => {
-  setTimeout(function () {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-  }, 1000);
-
-  return `Permission denied: unable to run the command '${args[0]}' as root.`;
+  return `Opening ${mailto}...`;
 };
 
 export const repo = async (args?: string[]): Promise<string> => {
-  setTimeout(function () {
-    window.open('https://github.com/m4tt72/terminal', '_blank');
+  setTimeout(() => {
+    window.open(repo_url, '_blank');
   }, 1000);
 
   return 'Opening repository...';
@@ -84,3 +69,23 @@ New 🎉: New command 'neofetch', for you linux.
 --
 `;
 };
+
+// export const vi = async (args: string[]): Promise<string> => {
+//   return `why use vi? try 'emacs'.`;
+// };
+
+// export const vim = async (args: string[]): Promise<string> => {
+//   return `why use vim? try 'emacs'.`;
+// };
+
+// export const emacs = async (args?: string[]): Promise<string> => {
+//   return `really? emacs? you should be using 'vim'`;
+// };
+
+// export const sudo = async (args?: string[]): Promise<string> => {
+//   setTimeout(function () {
+//     window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+//   }, 1000);
+
+//   return `Permission denied: unable to run the command '${args[0]}' as root.`;
+// };

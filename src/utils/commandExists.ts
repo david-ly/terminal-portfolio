@@ -1,7 +1,9 @@
 import * as bin from './bin';
 
-export const commandExists = (command: string) => {
-  const commands = ['clear', ...Object.keys(bin)];
+const bin_cmds = Object.keys(bin);
+const commands = ['clear', ...bin_cmds];
 
-  return commands.indexOf(command.split(' ')[0]) !== -1;
+export const commandExists = (expr: string) => {
+  const cmd = expr.split(' ')[0];
+  return commands.includes(cmd);
 };

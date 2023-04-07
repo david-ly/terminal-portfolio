@@ -1,18 +1,12 @@
-# [M4TT72 | Terminal](https://term.m4tt72.com)
+# [Personalized Terminal Portfolio | David Ly](https://davidmacly.dev/terminal-portfolio)
 
-A terminal style website
+Terminal stylized website forked from m4tt72's eponymous [project](https://github.com/m4tt72/terminal) and customized personally
 
-![screenshot](/docs/screenshot.png)
-
-## why?
-
-TL;DR: why not?
-
-I'm a Linux enthusiast, and I tried creating something that will allow 'normal' people to have a glimpse at my world.
+<!-- ![screenshot](/docs/screenshot.png) -->
 
 ## Quick Start
 
-### Using docker (recommended)
+<!-- ### Using docker (recommended)
 
 ```bash
 docker run -d --name terminal -p 3000:3000 m4tt72/terminal
@@ -26,53 +20,29 @@ docker run -d \
   -p 3000:3000 \
   -v `pwd`/config.json:/data/config.json \
   m4tt72/terminal
-```
+``` -->
 
 ### Using npm/yarn
 
 1. Install dependencies:
 
 ```bash
-yarn install
+{npm}|{yarn} install
 ```
 
 2. Build the project:
 
 ```bash
-yarn build
+{npm}|{yarn} build
 ```
 
 3. Run the server:
 
 ```bash
-yarn start
-```
-
-## Configuration
-
-Here's a sample of the `config.json` file:
-
-```json
-{
-  "bioUrl": "https://raw.githubusercontent.com/m4tt72/m4tt72/master/README.md",
-  "social": {
-    "instagram": "m4tt72",
-    "github": "m4tt72",
-    "linkedin": "yassinefathi"
-  },
-  "theme": "gruvboxdark" // list of themes available in themes.json
-}
+{npm}|{yarn} start
 ```
 
 ## Themes
 
 ![themes](/docs/screenshot.gif)
-
 [Here's](/docs/themes) a list of available themes.
-
-
-## Contributing
-
-Please feel free to pull requests or log issues.
-
-Thanks!

@@ -1,14 +1,12 @@
 import * as bin from './bin';
 
+const bin_cmds = Object.keys(bin);
+
 export const handleTabCompletion = (
   command: string,
   setCommand: React.Dispatch<React.SetStateAction<string>>,
 ) => {
-  const commands = Object.keys(bin).filter((entry) =>
-    entry.startsWith(command),
-  );
+  const matching_cmds = bin_cmds.filter((entry) => entry.startsWith(command));
 
-  if (commands.length === 1) {
-    setCommand(commands[0]);
-  }
+  if (matching_cmds.length === 1) setCommand(matching_cmds[0]);
 };
