@@ -152,7 +152,7 @@ const getInfo = () => {
     visited,
   )}\n`;
   message += `<span style="color: ${main_color}">Author</span>: ${pkg_json.author.name} (${pkg_json.author.email})\n`;
-  message += `<span style="color: ${main_color}">Donate</span>: <a href="${pkg_json.funding.url}" target="_blank">${pkg_json.funding.type}</a>\n`;
+  // message += `<span style="color: ${main_color}">Donate</span>: <a href="${pkg_json.funding.url}" target="_blank">${pkg_json.funding.type}</a>\n`;
 
   return message;
 };

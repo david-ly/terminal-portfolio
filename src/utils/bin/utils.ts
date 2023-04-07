@@ -44,12 +44,6 @@ export const repo = async (args?: string[]): Promise<string> => {
   return 'Opening repository...';
 };
 
-export const donate = async (args?: string[]): Promise<string> => {
-  window.open(packageJson.funding.url, '_blank');
-
-  return 'Opening donation url...';
-};
-
 export const banner = (args?: string[]): string => {
   return `
 ███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
@@ -69,6 +63,12 @@ New 🎉: New command 'neofetch', for you linux.
 --
 `;
 };
+
+// export const donate = async (args?: string[]): Promise<string> => {
+//   window.open(packageJson.funding.url, '_blank');
+
+//   return 'Opening donation url...';
+// };
 
 // export const vi = async (args: string[]): Promise<string> => {
 //   return `why use vi? try 'emacs'.`;

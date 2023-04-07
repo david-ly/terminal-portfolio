@@ -1,21 +1,22 @@
 import config from '../../config.json';
 
 export const getProjects = async () => {
-  const { data } = await fetch(
+  const response = await fetch(
     `https://api.github.com/users/${config.social.github}/repos`,
   );
 
-  return data;
+  return response.json();
 };
 
 export const getWeather = async (city: string) => {
-  const { data } = await fetch(`https://wttr.in/${city}?ATm`);
+  const response = await fetch(`https://wttr.in/${city}?ATm`);
 
-  return data;
+  return response.json();
 };
 
 export const getQuote = async () => {
-  const { data } = await fetch('https://api.quotable.io/random');
+  const response = await fetch('https://api.quotable.io/random');
+  const data = await response.json();
 
   return {
     quote: `“${data.content}” — ${data.author}`,
