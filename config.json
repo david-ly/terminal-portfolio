@@ -5,6 +5,6 @@
     "github": "david-ly",
     "linkedin": "david-mac-ly"
   },
-  "theme": "GoogleDark",
-  "border": false
+  "theme": "gooey",
+  "border": true
 }

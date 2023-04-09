@@ -16,13 +16,8 @@ interface Props {
 export const ThemeProvider: React.FC<Props> = ({ children }) => {
   const [theme, _setTheme] = useState<Theme>(themes[0]);
 
-  useEffect(() => {
-    const local_theme = localStorage.getItem('theme');
-    setTheme(config.theme || local_theme);
-  }, []);
-
   const setTheme = (name: string) => {
-    const index = getThemeIdx(name);
+    const index = themes.findIndex((the) => the.name.toLowerCase() === name);
     if (index === -1) return notFound(name);
 
     _setTheme(themes[index]);
@@ -31,18 +26,17 @@ export const ThemeProvider: React.FC<Props> = ({ children }) => {
     return `Theme ${themes[index].name} set successfully!`;
   };
 
+  useEffect(() => {
+    const local_theme = localStorage.getItem('theme');
+    setTheme(config.theme || local_theme);
+  }, []);
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
 };
-
-function getThemeIdx(name: string) {
-  return themes.findIndex((theme) => {
-    theme.name.toLowerCase() === name;
-  });
-}
 
 function notFound(name: string) {
   return `Theme '${name}' not found. Try 'theme ls' to see the list of available themes.`;

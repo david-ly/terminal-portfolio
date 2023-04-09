@@ -1,6 +1,13 @@
 import packageJson from '../../../package.json';
 import * as bin from './index';
 
+const ascii_name = `
+ ____              _     _   _
+|  _ \\  __ ___   _(_) __| | | |   _   _
+| | | |/ _\` \\ \\ / / |/ _\` | | |  | | | |
+| |_| | (_| |\\ V /| | (_| | | |__| |_| |
+|____/ \\__,_| \\_/ |_|\\__,_| |_____\\__, |
+                                  |___/`;
 const gui_site = 'https://davidmacly.dev';
 const my_email = 'david.ly@berkeley.edu';
 const repo_url = 'https://github.com/david-ly/terminal-portfolio';
@@ -45,22 +52,9 @@ export const repo = async (args?: string[]): Promise<string> => {
 };
 
 export const banner = (args?: string[]): string => {
-  return `
-███╗   ███╗██╗  ██╗████████╗████████╗███████╗██████╗
-████╗ ████║██║  ██║╚══██╔══╝╚══██╔══╝╚════██║╚════██╗
-██╔████╔██║███████║   ██║      ██║       ██╔╝ █████╔╝
-██║╚██╔╝██║╚════██║   ██║      ██║      ██╔╝ ██╔═══╝
-██║ ╚═╝ ██║     ██║   ██║      ██║      ██║  ███████╗
-╚═╝     ╚═╝     ╚═╝   ╚═╝      ╚═╝      ╚═╝  ╚══════╝ v${packageJson.version}
-
+  return `${ascii_name}
+--
 Type 'help' to see list of available commands.
-
---
-The project is open-source 🎉 type 'repo' to check out the repository.
-
-New 🎉: Try out the new 'theme' command. See all available themes <a href="https://github.com/m4tt72/terminal/tree/master/docs/themes">in the docs</a>.
-New 🎉: New command 'neofetch', for you linux.
---
 `;
 };
 
