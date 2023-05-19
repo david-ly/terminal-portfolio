@@ -1,34 +1,15 @@
 import config from '../../config.json';
 
 const gh_api_prof_url = 'https://api.github.com/users/david-ly'
+const gh_user = config.social.github;
+const gh_api_uri = `https://api.github.com/users/${gh_user}`;
 
 export const getBio = async () => {
-  const response = await fetch(gh_api_prof_url);
-  // console.dir({response})
-  const { bio } = response.json()
-
-  return bio;
-};
-
-export const getProjects = async () => {
-  const response = await fetch(
-    `https://api.github.com/users/${config.social.github}/repos`,
-  );
-
+  const response = await fetch(gh_api_uri);
   return response.json();
 };
 
-// export const getWeather = async (city: string) => {
-//   const response = await fetch(`https://wttr.in/${city}?ATm`);
-
-//   return response.json();
-// };
-
-// export const getQuote = async () => {
-//   const response = await fetch('https://api.quotable.io/random');
-//   const data = await response.json();
-
-//   return {
-//     quote: `“${data.content}” — ${data.author}`,
-//   };
-// };
+export const getProjects = async () => {
+  const response = await fetch(`${gh_api_uri}/repos`);
+  return response.json();
+};
