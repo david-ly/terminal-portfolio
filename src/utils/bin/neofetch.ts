@@ -38,7 +38,7 @@ llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
 llllllllllllll  lllllllllllllllllll
 \`'ccllllllllll  lllllllllllllllllll
-       \`' \*::  :ccllllllllllllllll
+        \`' \*::  :ccllllllllllllllll
                        \`\`\`\`''*::cll
 `;
 const lnx_logo = `
@@ -144,6 +144,7 @@ export const neofetch = async (args?: string[]): Promise<string> => {
   <table>
     <tr>
       <td>${art}</td>
+      <td>  </td>
       <td>${info}</td>
     <tr>
   </table>
